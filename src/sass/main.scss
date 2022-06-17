@@ -1,12 +1,13 @@
 @use 'abstracts';
 @use 'base';
 
-
 body {
-  background-image: url("../assets/bg-pattern-top.svg"), url(../assets/bg-pattern-bottom.svg);
+  background-image: url('../assets/bg-pattern-top.svg'),
+    url(../assets/bg-pattern-bottom.svg);
   background-color: var(--dark-cyan);
   background-repeat: no-repeat;
-  background-position: bottom calc(50vh - 50px) right calc(50vw - 40px), top calc(50vh - 50px) left calc(50vw - 50px);
+  background-position: bottom calc(50vh - 50px) right calc(50vw - 40px),
+    top calc(50vh - 50px) left calc(50vw - 50px);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -40,10 +41,11 @@ body {
       }
 
       &__name-age-container > * {
-          display: inline-block;
+        display: inline-block;
       }
 
-      &__age, &__city {
+      &__age,
+      &__city {
         color: var(--dark-grayish-blue);
       }
 
@@ -62,7 +64,6 @@ body {
         margin-bottom: 1.5rem;
         font-size: 1rem;
       }
-
     }
 
     &__stats {
@@ -98,4 +99,3 @@ body {
     }
   }
 }
-
