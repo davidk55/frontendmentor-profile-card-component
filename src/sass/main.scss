@@ -1,10 +1,101 @@
 @use 'abstracts';
+@use 'base';
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  font-size: 11;
-  a {
-    color: hsl(228, 45%, 44%);
+
+body {
+  background-image: url("../assets/bg-pattern-top.svg"), url(../assets/bg-pattern-bottom.svg);
+  background-color: var(--dark-cyan);
+  background-repeat: no-repeat;
+  background-position: bottom calc(50vh - 50px) right calc(50vw - 40px), top calc(50vh - 50px) left calc(50vw - 50px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+
+  .card {
+    margin-top: 170px;
+    max-width: 600px;
+    border-radius: 20px;
+    background-color: white;
+    text-align: center;
+    color: var(--very-dark-desaturated-blue);
+    font-family: var(--primary-font);
+    width: 350px;
+    max-width: 86%;
+
+    &__personal-information {
+      display: flex;
+      flex-direction: column;
+
+      &__background {
+        border-radius: 20px 20px 0 0;
+      }
+
+      &__profile-picture {
+        border: 5px solid white;
+        border-radius: 100px;
+        margin-top: -48px;
+        margin-bottom: 1.1rem;
+      }
+
+      &__name-age-container > * {
+          display: inline-block;
+      }
+
+      &__age, &__city {
+        color: var(--dark-grayish-blue);
+      }
+
+      &__name {
+        font-size: 1.2rem;
+        margin-right: 5px;
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+      }
+
+      &__age {
+        font-size: 1.2rem;
+      }
+
+      &__city {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+      }
+
+    }
+
+    &__stats {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-around;
+      padding: 25px 15px;
+
+      &__column {
+        text-align: center;
+
+        &__number {
+          font-weight: 700;
+          font-size: 1.1rem;
+          margin-bottom: 5px;
+        }
+
+        &__description {
+          color: var(--dark-grayish-blue);
+          font-size: 0.6rem;
+          // font-stretch: 12px;
+          letter-spacing: 1.5px;
+        }
+      }
+    }
+  }
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    font-size: 11;
+    a {
+      color: hsl(228, 45%, 44%);
+    }
   }
 }
+
