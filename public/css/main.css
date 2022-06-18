@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+:root {
+  --primary-font: "Kumbh Sans", sans-serif;
+}
+
+/***
+    The new CSS reset - version 1.6.1 (last updated 25.5.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly. */
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+body {
+  background-image: url("../assets/bg-pattern-top.svg"), url(../assets/bg-pattern-bottom.svg);
+  background-color: var(--dark-cyan);
+  background-repeat: no-repeat;
+  background-position: bottom calc(50vh - 50px) right calc(50vw - 40px), top calc(50vh - 50px) left calc(50vw - 50px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+body .card {
+  margin-top: 170px;
+  max-width: 600px;
+  border-radius: 20px;
+  background-color: white;
+  text-align: center;
+  color: var(--very-dark-desaturated-blue);
+  font-family: var(--primary-font);
+  width: 350px;
+  max-width: 86%;
+}
+body .card__personal-information {
+  display: flex;
+  flex-direction: column;
+}
+body .card__personal-information__background {
+  border-radius: 20px 20px 0 0;
+}
+body .card__personal-information__profile-picture {
+  border: 5px solid white;
+  border-radius: 100px;
+  margin-top: -48px;
+  margin-bottom: 1.1rem;
+}
+body .card__personal-information__name-age-container > * {
+  display: inline-block;
+}
+body .card__personal-information__age, body .card__personal-information__city {
+  color: var(--dark-grayish-blue);
+}
+body .card__personal-information__name {
+  font-size: 1.2rem;
+  margin-right: 5px;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+body .card__personal-information__age {
+  font-size: 1.2rem;
+}
+body .card__personal-information__city {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+body .card__stats {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  padding: 25px 15px;
+}
+body .card__stats__column {
+  text-align: center;
+}
+body .card__stats__column__number {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+body .card__stats__column__description {
+  color: var(--dark-grayish-blue);
+  font-size: 0.6rem;
+  letter-spacing: 1.5px;
+}
+body .attribution {
+  font-size: 11px;
+  text-align: center;
+  font-size: 11;
+}
+body .attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
